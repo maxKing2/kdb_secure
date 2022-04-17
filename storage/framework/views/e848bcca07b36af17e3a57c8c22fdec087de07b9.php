@@ -14,15 +14,15 @@
     <!-- Favicon-->
     <link rel="icon" type="image/png" href="<?php echo e(get_favicon()); ?>" />
     <!-- bootstrap.min css -->
-    <link rel="stylesheet" href="<?php echo e(asset('public/theme/plugins/bootstrap/css/bootstrap.min.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('theme/plugins/bootstrap/css/bootstrap.min.css')); ?>">
     <!-- Icon Font Css -->
-    <link rel="stylesheet" href="<?php echo e(asset('public/theme/plugins/icofont/icofont.min.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('theme/plugins/icofont/icofont.min.css')); ?>">
     <!-- Slick Slider  CSS -->
-    <link rel="stylesheet" href="<?php echo e(asset('public/theme/plugins/slick-carousel/slick/slick.css')); ?>">
-    <link rel="stylesheet" href="<?php echo e(asset('public/theme/plugins/slick-carousel/slick/slick-theme.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('theme/plugins/slick-carousel/slick/slick.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('theme/plugins/slick-carousel/slick/slick-theme.css')); ?>">
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="<?php echo e(asset('public/theme/css/style.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('theme/css/style.css')); ?>">
 
     <!--- Custom CSS Code --->
     <style type="text/css">
@@ -129,17 +129,17 @@
 
 
     <!-- Main jQuery -->
-    <script src="<?php echo e(asset('public/theme/plugins/jquery/jquery.js')); ?>"></script>
+    <script src="<?php echo e(asset('theme/plugins/jquery/jquery.js')); ?>"></script>
     <!-- Bootstrap 4.3.2 -->
-    <script src="<?php echo e(asset('public/theme/plugins/bootstrap/js/popper.js')); ?>"></script>
-    <script src="<?php echo e(asset('public/theme/plugins/bootstrap/js/bootstrap.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('theme/plugins/bootstrap/js/popper.js')); ?>"></script>
+    <script src="<?php echo e(asset('theme/plugins/bootstrap/js/bootstrap.min.js')); ?>"></script>
     <!-- Slick Slider -->
-    <script src="<?php echo e(asset('public/theme/plugins/slick-carousel/slick/slick.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('theme/plugins/slick-carousel/slick/slick.min.js')); ?>"></script>
     <!-- Counterup -->
-    <script src="<?php echo e(asset('public/theme/plugins/counterup/jquery.waypoints.min.js')); ?>"></script>
-    <script src="<?php echo e(asset('public/theme/plugins/counterup/jquery.counterup.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('theme/plugins/counterup/jquery.waypoints.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('theme/plugins/counterup/jquery.counterup.min.js')); ?>"></script>
 
-    <script src="<?php echo e(asset('public/theme/js/script.js')); ?>"></script>
+    <script src="<?php echo e(asset('theme/js/script.js')); ?>"></script>
 
 	<?php echo $__env->yieldContent('js-script'); ?>
 
