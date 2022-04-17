@@ -18,7 +18,7 @@
 					<tr>
 						<td>{{ _lang('Attachment') }}</td>
 						<td>
-							{!! $fixeddeposit->attachment == "" ? '' : '<a href="'. asset('public/uploads/media/'.$fixeddeposit->attachment) .'" target="_blank">'._lang('Download').'</a>' !!}
+							{!! $fixeddeposit->attachment == "" ? '' : '<a href="'. asset('uploads/media/'.$fixeddeposit->attachment) .'" target="_blank">'._lang('Download').'</a>' !!}
 						</td>
 					</tr>
 					<tr><td>{{ _lang('Remarks') }}</td><td>{{ $fixeddeposit->remarks }}</td></tr>

@@ -3,7 +3,7 @@
 
 @section('content')
 <!-- Slider Start -->
-<section class="banner d-flex align-items-center" style="background: url({{ get_option('home_banner') == '' ? asset('public/theme/images/slider-bg-1.jpg') : media_images(get_option('home_banner')) }})">
+<section class="banner d-flex align-items-center" style="background: url({{ get_option('home_banner') == '' ? asset('theme/images/slider-bg-1.jpg') : media_images(get_option('home_banner')) }})">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8">
@@ -25,7 +25,7 @@
 		<div class="row align-items-center">
 			<div class="col-lg-6">
 				<div class="about-img">
-					<img src="{{ get_option('home_about_us_banner') == '' ? asset('public/theme/images/about-us.jpg') : media_images(get_option('home_about_us_banner')) }}" alt="" class="img-fluid">
+					<img src="{{ get_option('home_about_us_banner') == '' ? asset('theme/images/about-us.jpg') : media_images(get_option('home_about_us_banner')) }}" alt="" class="img-fluid">
 				</div>
 			</div>
 			<div class="col-lg-6">

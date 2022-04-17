@@ -197,17 +197,17 @@ if (!function_exists('get_favicon')) {
 if (!function_exists('profile_picture')) {
 	function profile_picture($profile_picture = '') {
 		if ($profile_picture == '') {
-			return asset('public/backend/images/avatar.png');
+			return asset('backend/images/avatar.png');
 		}
 
-		return asset('public/uploads/profile/' . $profile_picture);
+		return asset('uploads/profile/' . $profile_picture);
 	}
 }
 
 if (!function_exists('media_image')) {
 	function media_images($image) {
 		if ($image == null || $image == '') {
-			return asset('public/uploads/media/default.png');
+			return asset('uploads/media/default.png');
 		}
 		return asset("public/uploads/media/$image");
 	}
