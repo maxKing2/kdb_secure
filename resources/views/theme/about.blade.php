@@ -45,7 +45,7 @@
 </section>
 
 <section class="section testimonial">
-	<div class="testimonial-bg" style="background: url({{ get_option('about_us_image') == '' ? asset('theme/images/about-us-main.jpg'): media_images(get_option('about_us_image')) }})"></div>
+	<div class="testimonial-bg" style="background: url({{ get_option('about_us_image') == '' ? asset('public/theme/images/about-us-main.jpg'): media_images(get_option('about_us_image')) }})"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 offset-lg-6">

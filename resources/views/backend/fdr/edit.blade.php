@@ -75,7 +75,7 @@
 						<div class="col-md-12">
 							<div class="form-group">
 								<label class="control-label">{{ _lang('Attachment') }}</label>
-								<input type="file" class="form-control dropify" name="attachment" data-default-file="{{ $fixeddeposit->attachment != null ? asset('uploads/media/'.$fixeddeposit->attachment) : '' }}" >
+								<input type="file" class="form-control dropify" name="attachment" data-default-file="{{ $fixeddeposit->attachment != null ? asset('public/uploads/media/'.$fixeddeposit->attachment) : '' }}" >
 							</div>
 						</div>
 
