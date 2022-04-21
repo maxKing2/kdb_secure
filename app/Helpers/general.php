@@ -178,9 +178,9 @@ if (!function_exists('get_logo')) {
 	function get_logo() {
 		$logo = get_option("logo");
 		if ($logo == "") {
-			return asset("public/backend/images/company-logo.png");
+			return asset("backend/images/company-logo.png");
 		}
-		return asset("public/uploads/media/$logo");
+		return asset("uploads/media/$logo");
 	}
 }
 
@@ -188,28 +188,28 @@ if (!function_exists('get_favicon')) {
 	function get_favicon() {
 		$favicon = get_option("favicon");
 		if ($favicon == "") {
-			return asset("public/backend/images/favicon.png");
+			return asset("backend/images/favicon.png");
 		}
-		return asset("public/uploads/media/$favicon");
+		return asset("uploads/media/$favicon");
 	}
 }
 
 if (!function_exists('profile_picture')) {
 	function profile_picture($profile_picture = '') {
 		if ($profile_picture == '') {
-			return asset('public/backend/images/avatar.png');
+			return asset('backend/images/avatar.png');
 		}
 
-		return asset('public/uploads/profile/' . $profile_picture);
+		return asset('uploads/profile/' . $profile_picture);
 	}
 }
 
 if (!function_exists('media_image')) {
 	function media_images($image) {
 		if ($image == null || $image == '') {
-			return asset('public/uploads/media/default.png');
+			return asset('uploads/media/default.png');
 		}
-		return asset("public/uploads/media/$image");
+		return asset("uploads/media/$image");
 	}
 }
 
