@@ -18,7 +18,7 @@
 						    <th>{{ _lang('AC Number') }}</th>
 							<th>{{ _lang('Amount') }}</th>
 							<th>{{ _lang('Type') }}</th>
-							<th>{{ _lang('Method') }}</th>
+							<th>{{ _lang('Description') }}</th>
 							<th>{{ _lang('Status') }}</th>
 							<th class="text-center">{{ _lang('Action') }}</th>
 					    </tr>

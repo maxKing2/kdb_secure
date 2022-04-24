@@ -5,7 +5,7 @@
 	<div class="col-lg-12">
 		<div class="card">
 			<div class="card-header">
-				<h4 class="header-title">{{ _lang('Deposit Money') }}</h4>
+				<h4 class="header-title">{{ _lang('Depsit Money') }}</h4>
 			</div>
 			<div class="card-body">
 			    <form method="post" class="validate" autocomplete="off" action="{{ route('deposits.store') }}" enctype="multipart/form-data">
@@ -48,6 +48,22 @@
 								<textarea class="form-control" name="note">{{ old('note') }}</textarea>
 							</div>
 						</div>
+						
+						<div class="col-md-12">
+							<div class="form-group">
+								<label class="control-label">{{ _lang('Description') }}</label>
+								<textarea class="form-control" name="description">{{ old('description') }}</textarea>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">{{ _lang('Sender') }}</label>
+								<input type="text" class="form-control " name="sender" value="{{ old('sender') }}" required>
+							</div>
+						</div>
+						
+						
 
 						<div class="col-md-12">
 							<div class="form-group">

@@ -114,10 +114,11 @@ class DepositController extends Controller {
         $transaction->amount          = $request->input('amount');
         $transaction->dr_cr           = 'cr';
         $transaction->type            = 'Deposit';
-        $transaction->method          = 'Manual';
+        $transaction->description     = $request->input('description');
         $transaction->status          = 2;
         $transaction->note            = $request->input('note');
         $transaction->created_user_id = auth()->id();
+        $transaction->sender          = $request->input('sender');
         $transaction->branch_id       = auth()->user()->branch_id;
         $transaction->created_at      = $request->date;
 

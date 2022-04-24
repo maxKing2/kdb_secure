@@ -69,7 +69,7 @@ class ProfileController extends Controller {
         if ($request->hasFile('profile_picture')) {
             $image     = $request->file('profile_picture');
             $file_name = "profile_" . time() . '.' . $image->getClientOriginalExtension();
-            Image::make($image)->crop(300, 300)->save(base_path('public/uploads/profile/') . $file_name);
+            Image::make($image)->crop(300, 300)->save('uploads/profile/' . $file_name);
             $profile->profile_picture = $file_name;
         }
 
@@ -202,7 +202,7 @@ class ProfileController extends Controller {
             if ($request->hasfile('identity_verification')) {
                 $file         = $request->file('identity_verification');
                 $identity_verification = 'Identification_Document_' . time() . '.' . $file->getClientOriginalExtension();
-                $file->move(public_path() . "/uploads/media/", $identity_verification);
+                $file->move("uploads/media/", $identity_verification);
 
                 $document                = new Document();
                 $document->document_name = "IDENTITY VERIFICATION";
