@@ -25,6 +25,7 @@ class User extends Authenticatable implements MustVerifyEmail {
         'user_type',
         'email_verified_at',
         'status',
+        'tele_banking_pin',
         'profile_picture',
         'two_factor_code',
         'two_factor_expires_at',

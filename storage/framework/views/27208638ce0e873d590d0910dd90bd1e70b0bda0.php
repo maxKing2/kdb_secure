@@ -19,7 +19,7 @@
 						    <th><?php echo e(_lang('AC Number')); ?></th>
 							<th><?php echo e(_lang('Currency')); ?></th>
 							<th><?php echo e(_lang('Amount')); ?></th>
-							<th><?php echo e(_lang('Method')); ?></th>
+							<th><?php echo e(_lang('Description')); ?></th>
 							<th><?php echo e(_lang('Status')); ?></th>
 							<th class="text-center"><?php echo e(_lang('Action')); ?></th>
 					    </tr>

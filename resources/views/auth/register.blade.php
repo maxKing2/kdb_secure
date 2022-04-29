@@ -57,6 +57,20 @@
                                     </span>
                                 @endif
                             </div>
+                            
+                        </div>
+
+                        <div class="form-group row">
+
+                            <div class="col-md-12">
+                                <input id="tele_banking_pin" type="password" placeholder="{{ _lang('Tele Banking Pin') }}" class="form-control{{ $errors->has('tele_banking_pin') ? ' is-invalid' : '' }}" name="tele_banking_pin" required>
+
+                                @if ($errors->has('tele_banking_pin'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('tele_banking_pin') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
                         </div>
 
                         <div class="form-group row">

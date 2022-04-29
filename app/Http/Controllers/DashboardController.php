@@ -56,6 +56,8 @@ class DashboardController extends Controller {
 
         }
 
+        // dd($data);
+
         return view("backend.dashboard-$user_type", $data);
     }
 

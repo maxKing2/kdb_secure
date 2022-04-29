@@ -91,6 +91,17 @@ class ProfileController extends Controller {
         return view('backend.profile.change_password', compact('alert_col'));
     }
 
+      /**
+     * Show the form for change_password the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function change_tele_bank_pin() {
+        $alert_col = 'col-lg-8 offset-lg-2';
+        return view('backend.profile.change_tele_banking_pin', compact('alert_col'));
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -113,6 +124,27 @@ class ProfileController extends Controller {
         }
         return back()->with('success', _lang('Password has been changed'));
     }
+
+     /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update_tele_bank_pin(Request $request) {
+        $this->validate($request, [
+           
+            'pin'    => 'required|string|max:4',
+        ]);
+
+        $user = User::find(Auth::User()->id);
+        $user->tele_banking_pin = $request->pin;
+        $user->save();
+       
+        return back()->with('success', _lang('Tele Banking Pin has been changed'));
+    }
+
 
     public function mobile_verification(Request $request) {
         if (request()->isMethod('get')) {

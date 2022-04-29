@@ -147,7 +147,7 @@
 							<th><?php echo e(_lang('Grand Total')); ?></th>
 							<th><?php echo e(_lang('DR/CR')); ?></th>
 							<th><?php echo e(_lang('Type')); ?></th>
-							<th><?php echo e(_lang('Method')); ?></th>
+							<th><?php echo e(_lang('Description')); ?></th>
 							<th><?php echo e(_lang('Status')); ?></th>
 					    </tr>
 					</thead>
@@ -174,7 +174,7 @@
 								<td><span class="<?php echo e($class); ?>"><?php echo e($symbol.' '.decimalPlace($transaction->amount, currency($transaction->currency->name))); ?></span></td>
 								<td><?php echo e(strtoupper($transaction->dr_cr)); ?></td>
 								<td><?php echo e(str_replace('_',' ',$transaction->type)); ?></td>
-								<td><?php echo e($transaction->method); ?></td>
+								<td><?php echo e($transaction->description); ?></td>
 								<td><?php echo xss_clean(transaction_status($transaction->status)); ?></td>
 							</tr>
 						<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

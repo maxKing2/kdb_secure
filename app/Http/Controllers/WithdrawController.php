@@ -127,12 +127,14 @@ class WithdrawController extends Controller {
         $transaction->amount          = $request->input('amount');
         $transaction->dr_cr           = 'dr';
         $transaction->type            = 'Withdraw';
-        $transaction->method          = 'Manual';
+        $transaction->description     = $request->input('description');
         $transaction->status          = 2;
         $transaction->note            = $request->input('note');
         $transaction->created_user_id = auth()->id();
         $transaction->branch_id       = auth()->user()->branch_id;
         $transaction->created_at      = $request->date;
+        $transaction->sender          = $request->input('sender');
+
 
         $transaction->save();
 

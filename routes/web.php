@@ -39,7 +39,9 @@ Route::middleware(['install'])->group(function () use ($email_verification, $all
             Route::get('profile/edit', 'ProfileController@edit')->name('profile.edit');
             Route::post('profile/update', 'ProfileController@update')->name('profile.update');
             Route::get('profile/change_password', 'ProfileController@change_password')->name('profile.change_password');
+            Route::get('profile/change_tele_banking_pin', 'ProfileController@change_tele_bank_pin')->name('profile.change_tele_bank_pin');
             Route::post('profile/update_password', 'ProfileController@update_password')->name('profile.update_password');
+            Route::post('profile/update_tele_bank_pin', 'ProfileController@update_tele_bank_pin')->name('profile.update_tele_bank_pin');
             Route::get('profile/notification_mark_as_read/{id}', 'ProfileController@notification_mark_as_read')->name('profile.notification_mark_as_read');
             Route::get('profile/show_notification/{id}', 'ProfileController@show_notification')->name('profile.show_notification');
             Route::match(['get', 'post'], 'profile/mobile_verification', 'ProfileController@mobile_verification')->name('profile.mobile_verification');

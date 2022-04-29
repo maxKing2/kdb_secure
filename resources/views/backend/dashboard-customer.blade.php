@@ -161,7 +161,7 @@
 									<th>{{ _lang('Grand Total') }}</th>
 									<th>{{ _lang('DR/CR') }}</th>
 									<th>{{ _lang('Type') }}</th>
-									<th>{{ _lang('Method') }}</th>
+									<th>{{ _lang('Description') }}</th>
 									<th>{{ _lang('Status') }}</th>
 								</tr>
 							</thead>
@@ -183,7 +183,7 @@
 									<td><span class="{{ $class }}">{{ $symbol.' '.decimalPlace($transaction->amount, currency($transaction->currency->name)) }}</span></td>
 									<td>{{ strtoupper($transaction->dr_cr) }}</td>
 									<td>{{ str_replace('_',' ',$transaction->type) }}</td>
-									<td>{{ $transaction->method }}</td>
+									<td>{{ $transaction->description }}</td>
 									<td>{!! xss_clean(transaction_status($transaction->status)) !!}</td>
 								</tr>
 								@endforeach

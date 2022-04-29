@@ -150,6 +150,7 @@
 							<a class="dropdown-item" href="<?php echo e(route('profile.index')); ?>"><i class="icofont-ui-user"></i> <?php echo e(_lang('Profile Overview')); ?></a>
 							<a class="dropdown-item" href="<?php echo e(route('profile.edit')); ?>"><i class="icofont-ui-edit"></i> <?php echo e(_lang('Profile Settings')); ?></a>
 							<a class="dropdown-item" href="<?php echo e(route('profile.change_password')); ?>"><i class="icofont-exchange"></i></i> <?php echo e(_lang('Change Password')); ?></a>
+							<a class="dropdown-item" href="<?php echo e(route('profile.change_tele_bank_pin')); ?>"><i class="icofont-exchange"></i></i> <?php echo e(_lang('Change Tele Banking Pin')); ?></a>
 							<?php if(auth()->user()->user_type == 'admin'): ?>
 							<a class="dropdown-item" href="<?php echo e(route('settings.update_settings')); ?>"><i class="icofont-ui-settings"></i> <?php echo e(_lang('System Settings')); ?></a>
 							<?php endif; ?>

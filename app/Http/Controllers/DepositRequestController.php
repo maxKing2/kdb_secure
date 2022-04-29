@@ -34,7 +34,7 @@ class DepositRequestController extends Controller {
 
         $deposit_requests = DepositRequest::select('deposit_requests.*')
             ->with('user')
-            ->with('method')
+            ->with('description')
             ->with('method.currency')
             ->orderBy("deposit_requests.id", "desc");
 

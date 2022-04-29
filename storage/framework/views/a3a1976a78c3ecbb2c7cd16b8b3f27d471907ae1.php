@@ -18,11 +18,15 @@
 
     <tr><td><?php echo e(_lang('DR/CR')); ?></td><td><?php echo e(strtoupper($transaction->dr_cr)); ?></td></tr>
 	<tr><td><?php echo e(_lang('Type')); ?></td><td><?php echo e(str_replace("_"," ",$transaction->type)); ?></td></tr>
-	<tr><td><?php echo e(_lang('Method')); ?></td><td><?php echo e($transaction->method); ?></td></tr>
+	<?php if($transaction->description != null): ?>
+	<tr><td><?php echo e(_lang('Description')); ?></td><td><?php echo e($transaction->description); ?></td></tr>		
+	<?php endif; ?>
 	<tr><td><?php echo e(_lang('Status')); ?></td><td><?php echo xss_clean(transaction_status($transaction->status)); ?></td></tr>
 	<tr><td><?php echo e(_lang('Note')); ?></td><td><?php echo e($transaction->note); ?></td></tr>
-	<tr><td><?php echo e(_lang('Created At')); ?></td><td><?php echo e($transaction->created_at); ?></td></tr>
-	<tr><td><?php echo e(_lang('Created By')); ?></td><td><?php echo e($transaction->created_by->name); ?></td></tr>
+	<?php if($transaction->sender != null ): ?>
+	<tr><td><?php echo e(_lang('Sender')); ?></td><td><?php echo e($transaction->sender); ?></td></tr>
+	<?php endif; ?>
+	<tr><td><?php echo e(_lang('Date')); ?></td><td><?php echo e($transaction->created_at); ?></td></tr>
 </table>
 
 <?php /**PATH /opt/lampp/htdocs/kdb_secure_bank/resources/views/backend/customer_portal/transaction_details.blade.php ENDPATH**/ ?>

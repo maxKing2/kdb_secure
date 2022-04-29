@@ -14,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['middleware' => 'authapitoken'], function(){
+
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
+
+    Route::get('get-account-balance',"API\GetUserInfoAPIController@get_user_balance");
+    Route::get('get-account-status',"API\GetUserInfoAPIController@get_user_status");
+
 });
+   

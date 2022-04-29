@@ -1104,7 +1104,7 @@ if (!function_exists('get_currency_position')) {
 	}
 }
 
-if (!function_exists('get_base_currency')) {
+if (!function_exists('base_currency_id')) {
 	function base_currency_id() {
 		$base_currency_id = Cache::get('base_currency_id');
 
@@ -1194,4 +1194,20 @@ if (!function_exists('processShortCode')) {
 		}
 		return $message;
 	}
+}
+
+
+if (!function_exists('resolve_user_account')) 
+{
+	function resolve_user_account($userby)
+	{
+		$data = DB::select("select * from users where email = '$userby' or account_number = '$userby' ", [1]);
+		// dd($data);
+		if(!$data)
+		{
+			return 0;
+		}
+		return $data;
+	}
+
 }

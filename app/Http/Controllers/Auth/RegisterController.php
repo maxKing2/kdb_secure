@@ -56,6 +56,7 @@ class RegisterController extends Controller {
             'email'                => ['required', 'string', 'email', 'max:191', 'unique:users'],
             'country_code'         => ['required'],
             'phone'                => ['required', 'string', 'unique:users'],
+            'tele_banking_pin'     => ['required', 'string', 'max:4'],
             'password'             => ['required', 'string', 'min:6', 'confirmed'],
             'g-recaptcha-response' => get_option('enable_recaptcha', 0) == 1 ? 'required|recaptchav3:register,0.5' : '',
         ], [
@@ -86,6 +87,7 @@ class RegisterController extends Controller {
             'phone'             => $data['phone'],
             'password'          => Hash::make($data['password']),
             'user_type'         => 'customer',
+            'tele_banking_pin'  => $data['tele_banking_pin'],
             'email_verified_at' => get_option('email_verification', 'disabled') == 'disabled' ? now() : null,
             'status'            => 1,
             'profile_picture'   => 'default.png',

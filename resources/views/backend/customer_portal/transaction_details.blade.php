@@ -18,10 +18,14 @@
 
     <tr><td>{{ _lang('DR/CR') }}</td><td>{{ strtoupper($transaction->dr_cr) }}</td></tr>
 	<tr><td>{{ _lang('Type') }}</td><td>{{ str_replace("_"," ",$transaction->type) }}</td></tr>
-	<tr><td>{{ _lang('Method') }}</td><td>{{ $transaction->method }}</td></tr>
+	@if ($transaction->description != null)
+	<tr><td>{{ _lang('Description') }}</td><td>{{ $transaction->description }}</td></tr>		
+	@endif
 	<tr><td>{{ _lang('Status') }}</td><td>{!! xss_clean(transaction_status($transaction->status)) !!}</td></tr>
 	<tr><td>{{ _lang('Note') }}</td><td>{{ $transaction->note }}</td></tr>
-	<tr><td>{{ _lang('Created At') }}</td><td>{{ $transaction->created_at}}</td></tr>
-	<tr><td>{{ _lang('Created By') }}</td><td>{{ $transaction->created_by->name}}</td></tr>
+	@if ($transaction->sender != null )
+	<tr><td>{{ _lang('Sender') }}</td><td>{{ $transaction->sender}}</td></tr>
+	@endif
+	<tr><td>{{ _lang('Date') }}</td><td>{{ $transaction->created_at}}</td></tr>
 </table>
 

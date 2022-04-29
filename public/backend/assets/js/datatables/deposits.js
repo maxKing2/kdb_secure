@@ -11,7 +11,7 @@
       { data: "user.account_number", name: "user.account_number" },
       { data: "amount", name: "amount" },
       { data: "type", name: "type" },
-      { data: "method", name: "method" },
+      { data: "description", name: "description" },
       { data: "status", name: "status" },
       { data: "action", name: "action" },
     ],
